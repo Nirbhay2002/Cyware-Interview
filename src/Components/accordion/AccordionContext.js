@@ -19,8 +19,3 @@ const AccordionProvider = ({ children }) => {
 };
 
 export {AccordionContext, AccordionProvider}
-
-// Create a hook for easy context access
-// export const useAccordion = () => {
-//   return useContext(AccordionContext);
-// };
