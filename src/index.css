@@ -28,4 +28,55 @@
   line-height: 1px;
 }
 
+/* ACCORDION */
 
+/* Basic reset for accordion */
+
+
+.accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  /* background: gray; */
+}
+
+.accordion-header {
+  background-color: #f8f9fa;
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #e2e6ea;
+  cursor:pointer;
+}
+
+.accordion-body {
+  padding: 15px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  overflow: hidden;
+}
+
+.accordion-body p {
+  margin: 0;
+}
+
+/* Add an arrow for header to indicate expand/collapse */
+.accordion-header::after {
+  content: '\002B'; /* "+" symbol */
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.open .accordion-header::after {
+  content: '\2212'; /* "-" symbol */
+  transform: rotate(180deg);
+}
